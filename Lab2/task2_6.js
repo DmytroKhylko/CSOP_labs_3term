@@ -24,12 +24,12 @@ class Encyclopedia extends ReferenceItem {
         this.edition = edition;
     }
     printItem() {
-        console.log(`${this.title} from ${ReferenceItem.department} was published in ${this.year}.\n Edition: ${this.edition}(${this.year})`);
+        // Перевизначіть метод printItem(). Нехай він робить те, що робив і додатково виводить рядок в консоль «Edition: edition (year)». 
+        // Ви отримаєте помилку, що властивість year недоступно.
+        //  Щоб воно було доступно змініть модифікатор доступу в класі ReferenceItem на protected.
+        console.log(`${this.title} from ${ReferenceItem.department} was published in ${this.year}.\nEdition: ${this.edition}(${this.year})`);
     }
 }
 // Оголосіть змінну refBook і створіть об'єкт Encyclopedia. Викличте метод printItem ();
 var refBook = new Encyclopedia('Lord of the Rings', new Date('1960'), 3);
 refBook.printItem();
-// Перевизначіть метод printItem(). Нехай він робить те, що робив і додатково виводить рядок в консоль «Edition: edition (year)». 
-// Ви отримаєте помилку, що властивість year недоступно.
-//  Щоб воно було доступно змініть модифікатор доступу в класі ReferenceItem на protected.

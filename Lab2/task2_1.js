@@ -17,10 +17,10 @@ var Category;
 // Видаліть тимчасово id в робітниках і дивіться, що з'явиться помилка.
 function getAllworkers() {
     let workers = [
-        { id: 1, name: 'Ivan', surname: 'Ivanov', available: true, salary: Category.BusinessAnalyst },
-        { id: 2, name: 'Petro', surname: 'Petrov', available: true, salary: Category.Developer },
-        { id: 3, name: 'Vasyl', surname: 'Vasyliev', available: false, salary: Category.Designer },
-        { id: 4, name: 'Evgen', surname: 'Zhukov', available: true, salary: Category.QA },
+        { id: 1, category: Category.BusinessAnalyst, name: 'Ivan', surname: 'Ivanov', available: true, salary: 1000 },
+        { id: 2, category: Category.Designer, name: 'Petro', surname: 'Petrov', available: true, salary: 1500 },
+        { id: 3, category: Category.Developer, name: 'Vasyl', surname: 'Vasyliev', available: false, salary: 1600 },
+        { id: 4, category: Category.QA, name: 'Evgen', surname: 'Zhukov', available: true, salary: 1300 }
     ];
     return workers;
 }
@@ -32,4 +32,9 @@ function getWorkerByID(id) {
     let result = workers.find(worker => worker.id === id);
     return result;
 }
-console.log(getWorkerByID(5));
+console.log(getWorkerByID(1));
+// Створіть функцію PrintWorker(), яка на вход приймає робітника і виводить в консоль фразу worker.name + worker.surname + 
+// ‘got salary’ + worker.salary. Для типа параметра используйте интерфейс Worker
+function printWorkder(worker) {
+    console.log(worker.name + worker.surname + "got salary" + worker.salary);
+}
