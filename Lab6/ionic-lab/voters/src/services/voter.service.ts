@@ -16,3 +16,12 @@ export class VoterService {
         return this.http.get<any[]>(this.apiUrl);
     }
 }
+
+export interface Voter{
+  uuid: string;
+  name: string;
+  gender: string;
+  birthDate: Date | string;
+  age: number | string;
+  email: string;
+}
