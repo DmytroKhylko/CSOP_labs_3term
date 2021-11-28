@@ -24,7 +24,6 @@ export class FavoriteVoterService {
   addFavoriteVoter(voterToAdd: Voter): void {
     this.favoriteVoters.push(voterToAdd);
 
-    console.log("service", this.favoriteVoters);
     this.favoriteVoters$.next(this.favoriteVoters)
 
   }

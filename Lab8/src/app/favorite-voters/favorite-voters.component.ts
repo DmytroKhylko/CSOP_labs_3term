@@ -23,7 +23,6 @@ export class FavoriteVotersComponent implements OnInit {
     this.favoriteVoterService.favoriteVoters$.subscribe(voters => {
       this.voters = voters;
       this.dataSource = new MatTableDataSource(voters);
-      console.log("table favorite voters subscribe trigered", this.voters);
     })
   }
   openDialog(voterUUID: any) {
