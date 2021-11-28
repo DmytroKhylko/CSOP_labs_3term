@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class FavoriteVoterService {
   public favoriteVoters$ = new BehaviorSubject<Voter[]>([]);
-  public favoriteVoters: Voter[] = [];
+  private favoriteVoters: Voter[] = [];
 
   constructor() { }
 
